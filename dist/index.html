@@ -16,19 +16,19 @@
       <h2>add book form</h2>
       <div class="field">
         <label>Title:</label>
-        <input type="text" name="title" />
+        <input type="text" name="title" required />
       </div>
       <div class="field">
         <label>Author:</label>
-        <input type="text" name="author" />
+        <input type="text" name="author" required />
       </div>
       <div class="field">
         <label>Pages:</label>
-        <input type="number" name="pages" />
+        <input type="number" name="pages" min="1" required />
       </div>
       <div class="field">
         <label>Read:</label>
-        <select name="read">
+        <select name="read" required>
           <option value="yes">yes</option>
           <option value="no">no</option>
         </select>
