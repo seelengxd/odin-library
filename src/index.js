@@ -30,7 +30,7 @@ class Library {
     const removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
     removeButton.addEventListener("click", () => {
-      this.myLibrary = this.myLibrary.filter((b) => b != book);
+      this.myLibrary = this.myLibrary.filter((b) => b !== book);
       container.removeChild(card);
     });
     card.appendChild(title);
@@ -66,7 +66,7 @@ function handleForm(e) {
   const author = document.querySelector("input[name='author']").value;
   const pages = document.querySelector("input[name='pages']").value;
   const read = document.querySelector("select[name='read']").value;
-  const book = library.addBookToLibrary(title, author, pages, read == "yes");
+  const book = library.addBookToLibrary(title, author, pages, read === "yes");
   library.display(book);
 }
 
